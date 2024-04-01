@@ -1,10 +1,21 @@
 package com.fibonacci_gcd;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         int result;
-        int A = 100;
-        int B = 21;
+
+        Scanner numberA = new Scanner(System.in);
+        System.out.println("Enter the first number: ");
+        int A = numberA.nextInt();
+
+        Scanner numberB = new Scanner(System.in);
+        System.out.println("Enter the second number: ");
+        int B = numberB.nextInt();
+
+        numberA.close();
+        numberB.close();
+
         result = GCD(A, B);
         System.out.println("GCD(" + A + ", " + B + ") = " + result);
     }
