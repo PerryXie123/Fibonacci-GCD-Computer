@@ -4,6 +4,10 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         int result;
+        int sumA;
+        int sumB;
+        int fibA;
+        int fibB;
 
         Scanner numberA = new Scanner(System.in);
         System.out.println("Enter the first number: ");
@@ -16,11 +20,14 @@ public class Main {
         numberA.close();
         numberB.close();
         
-        A = Fibonacci(A+1);
-        B = Fibonacci(B+1);
+        fibA = Fibonacci(A+1);
+        fibB = Fibonacci(B+1);
 
-        A = A-1;
-        B = B-1;
+        sumA = fibA-1;
+        sumB = fibB-1;
+
+        System.out.println("The sum of the first " + A + " Fibonacci numbers is: " + sumA);
+        System.out.println("The sum of the first " + B + " Fibonacci numbers is: " + sumB);
 
         result = GCD(A, B);
         System.out.println("GCD(" + A + ", " + B + ") = " + result);
