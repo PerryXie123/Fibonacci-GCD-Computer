@@ -3,32 +3,42 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        //Initialises variables
         int result;
         int sumA;
         int sumB;
         int fibA;
         int fibB;
 
+        //Takes the user input for the first number
         Scanner numberA = new Scanner(System.in);
-        System.out.println("Enter the first number: ");
+        System.out.print("Enter the first number: ");
         int A = numberA.nextInt();
 
+        //Takes the user input for the second number
         Scanner numberB = new Scanner(System.in);
-        System.out.println("Enter the second number: ");
+        System.out.print("Enter the second number: ");
         int B = numberB.nextInt();
+
+        System.out.println("");
 
         numberA.close();
         numberB.close();
         
+        //Calculates the (n+2)th Fibonacci number
         fibA = Fibonacci(A+1);
         fibB = Fibonacci(B+1);
 
+        //Calculates the sum of the first nth Fibonacci numbers
         sumA = fibA-1;
         sumB = fibB-1;
 
         System.out.println("The sum of the first " + A + " Fibonacci numbers is: " + sumA);
         System.out.println("The sum of the first " + B + " Fibonacci numbers is: " + sumB);
 
+        System.out.println("");
+
+        //Calculates the GCD of the two summed Fibonacci numbers
         result = GCD(A, B);
         System.out.println("GCD(" + A + ", " + B + ") = " + result);
     }
@@ -38,6 +48,7 @@ public class Main {
         if(n <= 1){
             return n;
         }
+        //Recursive conditions
         else{
             return (Fibonacci(n-1) + Fibonacci(n-2));
         }
