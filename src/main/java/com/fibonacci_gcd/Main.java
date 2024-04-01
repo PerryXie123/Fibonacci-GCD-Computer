@@ -6,7 +6,7 @@ public class Main {
     }
 
     //Method for computing the GCD of two positive integers, A and B.
-    public void GCD(int a, int b){
+    public int GCD(int a, int b){
         //Initialises two positive integers, A and B.
         int A;
         int B;
@@ -19,6 +19,11 @@ public class Main {
         else{
             A = b;
             B = a;
+        }
+
+        //Base case.
+        if(A == B){
+            return A;
         }
     }
 }
