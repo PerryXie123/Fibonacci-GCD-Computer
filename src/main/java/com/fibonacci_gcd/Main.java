@@ -6,24 +6,24 @@ public class Main {
     }
 
     //Method for computing the GCD of two positive integers, A and B.
-    public int GCD(int a, int b){
+    public int GCD(int A, int B){
         //Initialises two positive integers, A and B.
-        int A;
-        int B;
+        int a;
+        int b;
 
         //Initialises A to be the larger of the two inputs.
-        if(a > b){
-            A = a;
-            B = b;
+        if(A > B){
+            a = A;
+            b = B;
         }
         else{
-            A = b;
-            B = a;
+            a = B;
+            b = A;
         }
 
         //Base case.
-        if(A == B){
-            return A;
+        if(a == b){
+            return a;
         }
     }
 }
