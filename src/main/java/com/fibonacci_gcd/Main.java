@@ -15,9 +15,19 @@ public class Main {
 
         numberA.close();
         numberB.close();
-
+        
         result = GCD(A, B);
         System.out.println("GCD(" + A + ", " + B + ") = " + result);
+    }
+    //Methof for computing the nth Fibonacci number
+    public static int Fibonacci(int n){
+        //Base case
+        if(n <= 1){
+            return n;
+        }
+        else{
+            return (Fibonacci(n-1) + Fibonacci(n-2));
+        }
     }
 
     //Method for computing the GCD of two positive integers, A and B.
