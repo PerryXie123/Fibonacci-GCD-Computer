@@ -2,11 +2,13 @@ package com.fibonacci_gcd;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        int result;
+        result = GCD(3, 2);
+        System.out.println(result);
     }
 
     //Method for computing the GCD of two positive integers, A and B.
-    public int GCD(int A, int B){
+    public static int GCD(int A, int B){
         //Initialises two positive integers, A and B.
         int a;
         int b;
@@ -37,8 +39,7 @@ public class Main {
         else{
             a = b;
             b = r;
-            GCD(a, b);
+            return GCD(a, b);
         }
-        return -1;
     }
 }
