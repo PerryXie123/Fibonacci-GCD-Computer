@@ -3,8 +3,10 @@ package com.fibonacci_gcd;
 public class Main {
     public static void main(String[] args) {
         int result;
-        result = GCD(3, 2);
-        System.out.println(result);
+        int A = 100;
+        int B = 21;
+        result = GCD(A, B);
+        System.out.println("GCD(" + A + ", " + B + ") = " + result);
     }
 
     //Method for computing the GCD of two positive integers, A and B.
