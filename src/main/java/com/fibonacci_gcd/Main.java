@@ -16,10 +16,16 @@ public class Main {
         numberA.close();
         numberB.close();
         
+        A = Fibonacci(A+1);
+        B = Fibonacci(B+1);
+
+        A = A-1;
+        B = B-1;
+
         result = GCD(A, B);
         System.out.println("GCD(" + A + ", " + B + ") = " + result);
     }
-    //Methof for computing the nth Fibonacci number
+    //Method for computing the nth Fibonacci number
     public static int Fibonacci(int n){
         //Base case
         if(n <= 1){
