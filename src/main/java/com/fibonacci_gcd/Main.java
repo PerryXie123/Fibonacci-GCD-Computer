@@ -39,8 +39,8 @@ public class Main {
         System.out.println("");
 
         //Calculates the GCD of the two summed Fibonacci numbers
-        result = GCD(A, B);
-        System.out.println("GCD(" + A + ", " + B + ") = " + result);
+        result = GCD(sumA, sumB);
+        System.out.println("GCD(" + sumA + ", " + sumB + ") = " + result);
     }
     //Method for computing the nth Fibonacci number
     public static int Fibonacci(int n){
@@ -48,10 +48,18 @@ public class Main {
         if(n <= 1){
             return n;
         }
-        //Recursive conditions
-        else{
-            return (Fibonacci(n-1) + Fibonacci(n-2));
+        //Iteration
+
+        int fib = 1;
+        int fibPrevious = 1;
+
+        for(int i = 2; i < n; i++){
+            int temp = fib;
+            fib += fibPrevious;
+            fibPrevious = temp;
         }
+
+        return fib;
     }
 
     //Method for computing the GCD of two positive integers, A and B.
