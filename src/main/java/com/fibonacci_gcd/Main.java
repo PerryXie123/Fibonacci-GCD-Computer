@@ -12,12 +12,12 @@ public class Main {
 
         //Takes the user input for the first number
         Scanner numberA = new Scanner(System.in);
-        System.out.print("Enter the first number: ");
+        System.out.print("Enter the first number (less than 46): ");
         int A = numberA.nextInt();
 
         //Takes the user input for the second number
         Scanner numberB = new Scanner(System.in);
-        System.out.print("Enter the second number: ");
+        System.out.print("Enter the second number (less than 46): ");
         int B = numberB.nextInt();
 
         System.out.println("");
@@ -40,6 +40,7 @@ public class Main {
 
         //Calculates the GCD of the two summed Fibonacci numbers
         result = GCD(sumA, sumB);
+        System.out.println(""); 
         System.out.println("GCD(" + sumA + ", " + sumB + ") = " + result);
     }
     //Method for computing the nth Fibonacci number
@@ -67,6 +68,7 @@ public class Main {
         //Initialises two positive integers, A and B.
         int a;
         int b;
+        int q;
         int r;
 
         //Initialises A to be the larger of the two inputs.
@@ -87,6 +89,11 @@ public class Main {
         //GCD computation
         r = a%b;
 
+        //Quotient computation
+        q = (a-r)/b;
+
+        //Output comments
+        System.out.println(String.format("Dividend: %d, Divisor: %d, Quotient: %d, Remainder: %d", a, b, q, r));
         //Recursion conditions
         if(r == 0){
             return b;
