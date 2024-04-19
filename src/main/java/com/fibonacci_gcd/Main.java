@@ -9,16 +9,38 @@ public class Main {
         int sumB;
         int fibA;
         int fibB;
+        int A;
+        int B;
 
         //Takes the user input for the first number
+        //Checks for whether the input is valid or not
         Scanner numberA = new Scanner(System.in);
-        System.out.print("Enter the first number (less than 46): ");
-        int A = numberA.nextInt();
+        do{
+            System.out.print("Enter an integer between 0 and 46: ");
+            while(!numberA.hasNextInt()){
+                System.out.print("Invalid input. Please enter an integer: ");
+                numberA.next();
+            }
+            A = numberA.nextInt();
+            if(A < 0 || A > 45){
+                System.out.println("Invalid input. Integer must be between 0 and 45.");
+            }
+        }while(A < 0 || A > 45);
 
         //Takes the user input for the second number
+        //Checks for whether the input is valid or not
         Scanner numberB = new Scanner(System.in);
-        System.out.print("Enter the second number (less than 46): ");
-        int B = numberB.nextInt();
+        do{
+            System.out.print("Enter another integer between 0 and 46: ");
+            while(!numberB.hasNextInt()){
+                System.out.print("Invalid input. Please enter an integer: ");
+                numberB.next();
+            }
+            B = numberB.nextInt();
+            if(B < 0 || B > 45){
+                System.out.println("Invalid input. Integer must be between 0 and 45.");
+            }
+        }while(B < 0 || B > 45);
 
         System.out.println("");
 
@@ -33,7 +55,7 @@ public class Main {
         sumA = fibA-1;
         sumB = fibB-1;
 
-        //Output comments to update user
+        //Output comments to update 
         System.out.println("The sum of the first " + A + " Fibonacci numbers is: " + sumA);
         System.out.println("The sum of the first " + B + " Fibonacci numbers is: " + sumB);
 
