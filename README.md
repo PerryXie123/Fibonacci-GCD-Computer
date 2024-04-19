@@ -20,8 +20,8 @@ Program Instructions:
     2. Input another number under 46 for which the number of Fibonacci numbers should be summed.
 
 Program Example:
-    Enter the first number (less than 46): 7
-    Enter the second number (less than 46): 4
+    Enter an integer between 0 and 46: 7
+    Enter another integer between 0 and 46: 4
     Output:
         The sum of the first 7 Fibonacci numbers is: 20
         The sum of the first 4 Fibonacci numbers is: 4
@@ -54,6 +54,9 @@ Test Documentation:
         Input: 30
         Output: 832040
 
+        Input: 42
+        Output: 267914296
+
         NOTES:
             //Recursive process for generating Fibonacci Numbers is relatively slow after the 40th-ish number.
             //Try to use a more time efficient process next.
@@ -76,6 +79,7 @@ Test Documentation:
 
         NOTES:
             //Iterative process for calculating Fibonacci Numbers is much more time efficient than recursion.
+            //Iterative process also gives the same answers as recursion.
             //Future Fibonacci generation will be done with iteration.
 
 
@@ -99,7 +103,8 @@ Test Documentation:
 
         NOTES:
             //Recursive process for calculating GCD is quite efficient.
-            //Follows the Euclidean algorithm steps to calculate GCD.s
+            //Follows the Euclidean algorithm steps to calculate GCD.
+            //Used the Scanner class to take user inputs, rather than having to manually change the Main class.
 
     Calculating sum of first N Fibonacci Numbers (Iteration):
         Input: 4
@@ -128,6 +133,7 @@ Test Documentation:
 
         NOTES:
             //Introduced new bounds, input numbers must be lower than 46.
+            //Generating the largest sum within bounds (first 45 Fibonacci Numbers) is very fast.
 
     Calculating GCD of two sums of the first N Fibonacci Numbers with output comments:
         Input: 7, 4
@@ -189,3 +195,22 @@ Test Documentation:
 
         Input: 46, 20
         Output: ERROR
+
+        Input: -1, 3
+        Output: ERROR
+
+        Input: abc, def
+        Output: ERROR
+
+        NOTES:
+            //Incorporating the Fibonacci summation method and GCD computation method together works very well.
+            //The iterative process and recursive process for Fibonacci and GCD respectively are quite efficient.
+            //Obviously, invalid inputs such as non-integers, or integers outside the bounds, outputs an error.
+            //Implemented valid input check to fix this.
+
+Major Changes for increased efficiency and ease of use:
+    -Changed the Fibonacci generation process from recursion to iteration.
+    -Used a Scanner class to take user inputs from the terminal.
+    -Used the same iteration process to generate the sum of the first N Fibonacci Numbers.
+    -Introduced new bounds for user inputs.
+    -Incoporated a check for invalid inputs.
