@@ -208,6 +208,47 @@ Test Documentation:
             //Obviously, invalid inputs such as non-integers, or integers outside the bounds, outputs an error.
             //Implemented valid input check to fix this.
 
+Solution for Fibonacci Summation:
+    The solution I used to sum the first N Fibonacci Numbers was the following equation:
+        Sum of the first N Fibonacci Numbers = (N+2)th Fibonacci Number - 1
+    This equation eliminated the need to manually sum up an array of numbers, which would've been extremely inefficient.
+    This also meant that I didn't need to generate and store a whole bunch of numbers.
+    To prove this equation is valid, lets look at a few examples:
+        Example 1:
+            Sum of the first 4 Fibonacci Numbers.
+            The sum of the first 4 Fibonacci Numbers is:
+                0 + 1 + 1 + 2 = 4
+            The (4+2)th Fibonacci Number is 0, 1, 1, 2, 3, <5>
+                5 - 1 = 4
+
+        Example 2:
+            Sum of the first 9 Fibonacci Numbers.
+            The sum of the first 9 Fibonacci Numbers is:
+                0 + 1 + 1 + 2 + 3 + 5 + 8 + 13 + 21 = 54
+            The (9+2)th Fibonacci Number is 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, <55>
+                55 - 1 = 54
+
+Solution for GCD computation:
+    The method I used for calculating GCD was the Euclidean Algorithm. Here are some examples:
+        Example 1:
+            GCD(232, 20)
+            Firstly, the Dividend is initialised to be the greater of the two numbers, while the Divisor is initialised to be the lesser.
+            Dividend = 232, Divisor = 20
+            Next, the Euclidean Algorithm states that while the remainder of Dividend/Divisor != 0, the new Dividend becomes the Divisor, and then new Divisor becomes the remainder of Dividend/Divisor. The process is then repeated.
+            Thus, for the above example:
+                Dividend: 232, Divisor: 20, Quotient: 11, Remainder: 12
+                Dividend: 20, Divisor: 12, Quotient: 1, Remainder: 8
+                Dividend: 12, Divisor: 8, Quotient: 1, Remainder: 4
+                Dividend: 8, Divisor: 4, Quotient: 2, Remainder: 0
+            The remainder is zero, and so the final Divisor is returned. Thus GCD(232, 20) = 4
+
+        Example 2:
+            GCD(4, 33)
+            Dividend = 33, Divisor = 4
+            Dividend: 33, Divisor: 4, Quotient: 8, Remainder: 1
+            Dividend: 4, Divisor: 1, Quotient: 4, Remainder: 0
+            GCD(4, 33) = 1       
+
 Major Changes for increased efficiency and ease of use:
     -Changed the Fibonacci generation process from recursion to iteration.
     -Used a Scanner class to take user inputs from the terminal.
