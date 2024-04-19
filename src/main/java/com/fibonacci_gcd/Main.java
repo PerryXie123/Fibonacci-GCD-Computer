@@ -33,6 +33,7 @@ public class Main {
         sumA = fibA-1;
         sumB = fibB-1;
 
+        //Output comments to update user
         System.out.println("The sum of the first " + A + " Fibonacci numbers is: " + sumA);
         System.out.println("The sum of the first " + B + " Fibonacci numbers is: " + sumB);
 
@@ -49,8 +50,8 @@ public class Main {
         if(n <= 1){
             return n;
         }
-        //Iteration
 
+        //Iteration
         int fib = 1;
         int fibPrevious = 1;
 
@@ -81,7 +82,7 @@ public class Main {
             b = A;
         }
 
-        //Base case.
+        //Base case
         if(a == b){
             return a;
         }
@@ -94,6 +95,7 @@ public class Main {
 
         //Output comments
         System.out.println(String.format("Dividend: %d, Divisor: %d, Quotient: %d, Remainder: %d", a, b, q, r));
+
         //Recursion conditions
         if(r == 0){
             return b;

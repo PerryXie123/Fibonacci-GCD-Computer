@@ -3,6 +3,7 @@ Input Bounds:
     -Must be less than 46.
 
 User Compilation and Exec Instructions (Windows Only):
+    Prerequisite: Have JDK version 17 installed.
     1. Download Maven version 3.9.6 from the official Maven website.
     2. Extract the downloaded file to Program Files.
     3. Navigate to the bin folder inside the extracted file.
@@ -53,6 +54,10 @@ Test Documentation:
         Input: 30
         Output: 832040
 
+        NOTES:
+            //Recursive process for generating Fibonacci Numbers is relatively slow after the 40th-ish number.
+            //Try to use a more time efficient process next.
+
     Calculating Nth Fibonacci Number (Iteration):
         Input: 5
         Output: 3
@@ -68,6 +73,11 @@ Test Documentation:
 
         Input: 42
         Output: 267914296
+
+        NOTES:
+            //Iterative process for calculating Fibonacci Numbers is much more time efficient than recursion.
+            //Future Fibonacci generation will be done with iteration.
+
 
     Calculating GCD (Recursion):
         Input: GCD(5, 2)
@@ -86,6 +96,10 @@ Test Documentation:
 
         Input: GCD(203, 46)
         Output: 1
+
+        NOTES:
+            //Recursive process for calculating GCD is quite efficient.
+            //Follows the Euclidean algorithm steps to calculate GCD.s
 
     Calculating sum of first N Fibonacci Numbers (Iteration):
         Input: 4
@@ -112,7 +126,8 @@ Test Documentation:
         Input: 46
         Output: ERROR
 
-        //Introduce new bounds: input must be less than 46
+        NOTES:
+            //Introduced new bounds, input numbers must be lower than 46.
 
     Calculating GCD of two sums of the first N Fibonacci Numbers with output comments:
         Input: 7, 4
